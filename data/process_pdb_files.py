@@ -41,7 +41,7 @@ parser.add_argument(
     '--write_dir',
     help='Path to write results to.',
     type=str,
-    default='./preprocessed_pdbs')
+    default='./data/processed_pdb')
 parser.add_argument(
     '--debug',
     help='Turn on for debugging.',
