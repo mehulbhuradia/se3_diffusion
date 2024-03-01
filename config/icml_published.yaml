@@ -4,9 +4,9 @@ defaults:
 data:
   cluster_path: null
 
-diffuser:
-  so3:
-    use_cached_score: True
+# diffuser:
+#   so3:
+#     use_cached_score: True
 
 experiment:
   name: icml_published
