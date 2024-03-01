@@ -419,6 +419,7 @@ def create_data_loader(
         collate_fn = None
     persistent_workers = True if num_workers > 0 else False
     prefetch_factor = 2 if num_workers == 0 else prefetch_factor
+    print(prefetch_factor, num_workers)
     return data.DataLoader(
         torch_dataset,
         sampler=sampler,
