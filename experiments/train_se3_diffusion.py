@@ -227,7 +227,7 @@ class Experiment:
             length_batch=False,
             batch_size=self._exp_conf.eval_batch_size,
             shuffle=False,
-            num_workers=0,
+            num_workers=num_workers,
             drop_last=False,
         )
         return train_loader, valid_loader, train_sampler, valid_sampler
