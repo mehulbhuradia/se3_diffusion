@@ -82,7 +82,7 @@ experiment:
   num_epoch: 500_000
   learning_rate: 0.0001
   max_squared_res: 500000
-  prefetch_factor: 100
+  prefetch_factor: null
   use_gpu: True
   num_gpus: 2
   sample_mode: cluster_time_batch
