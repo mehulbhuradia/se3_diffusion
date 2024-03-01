@@ -14,4 +14,4 @@ module load cuda/12.2 cudnn/12-8.9.1.23 miniconda/3.10
 
 conda activate /tudelft.net/staff-umbrella/Enzymix/se3_diffusion/se3
 
-srun python experiments/train_se3_diffusion.py
+srun python experiments/train_se3_diffusion.py -m
