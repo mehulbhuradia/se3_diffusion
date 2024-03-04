@@ -114,15 +114,15 @@ class Experiment:
                 OmegaConf.set_struct(conf, True)
             conf.experiment.warm_start = ckpt_dir
 
+            # Bring this back to resume training from the checkpoint
+            # ######################################################3
             # For compatibility with older checkpoints.
-            if 'optimizer' in ckpt_pkl:
-                ckpt_opt = ckpt_pkl['optimizer']
-            if 'epoch' in ckpt_pkl:
-                self.trained_epochs = ckpt_pkl['epoch']
-                print(self.trained_epochs)
-            if 'step' in ckpt_pkl:
-                self.trained_steps = ckpt_pkl['step']
-                print(self.trained_steps)
+            # if 'optimizer' in ckpt_pkl:
+            #     ckpt_opt = ckpt_pkl['optimizer']
+            # if 'epoch' in ckpt_pkl:
+            #     self.trained_epochs = ckpt_pkl['epoch']
+            # if 'step' in ckpt_pkl:
+            #     self.trained_steps = ckpt_pkl['step']
 
 
         # Initialize experiment objects
