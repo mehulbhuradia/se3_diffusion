@@ -26,6 +26,7 @@ import logging
 import copy
 import random
 import pandas as pd
+import tempfile
 
 from collections import defaultdict
 from collections import deque
@@ -235,12 +236,13 @@ class Experiment:
 
     def init_wandb(self):
         self._log.info('Initializing Wandb.')
+        print(tempfile.gettempdir())
         conf_dict = OmegaConf.to_container(self._conf, resolve=True)
         wandb.init(
             project='se3-diffusion',
             name=self._exp_conf.name,
             config=dict(eu.flatten_dict(conf_dict)),
-            dir=self._exp_conf.wandb_dir,
+            dir=tempfile.gettempdir(),
         )
         self._exp_conf.run_id = wandb.util.generate_id()
         self._exp_conf.wandb_dir = wandb.run.dir
