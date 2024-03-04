@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH --partition=general
-#SBATCH --job-name=se3
+#SBATCH --job-name=se3_train
 #SBATCH --qos=long         
 #SBATCH --time=168:00:00      
 #SBATCH --ntasks=1         

@@ -18,6 +18,3 @@ experiment:
   separate_rot_loss: False
   sample_mode: time_batch
 
-hydra:
-  sweeper:
-    params:
