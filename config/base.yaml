@@ -97,7 +97,7 @@ experiment:
   early_ckpt: True
 
   # Checkpoint directory to warm start from.
-  warm_start: ./warm/
+  warm_start: null
   use_warm_start_conf: False
   ckpt_dir: ./ckpt/
 
