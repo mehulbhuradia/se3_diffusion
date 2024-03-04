@@ -119,8 +119,10 @@ class Experiment:
                 ckpt_opt = ckpt_pkl['optimizer']
             if 'epoch' in ckpt_pkl:
                 self.trained_epochs = ckpt_pkl['epoch']
+                print(self.trained_epochs)
             if 'step' in ckpt_pkl:
                 self.trained_steps = ckpt_pkl['step']
+                print(self.trained_steps)
 
 
         # Initialize experiment objects
