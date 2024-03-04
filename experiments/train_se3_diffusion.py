@@ -117,8 +117,8 @@ class Experiment:
             # Bring this back to resume training from the checkpoint
             # ######################################################3
             # For compatibility with older checkpoints.
-            # if 'optimizer' in ckpt_pkl:
-            #     ckpt_opt = ckpt_pkl['optimizer']
+            if 'optimizer' in ckpt_pkl:
+                ckpt_opt = ckpt_pkl['optimizer']
             # if 'epoch' in ckpt_pkl:
             #     self.trained_epochs = ckpt_pkl['epoch']
             # if 'step' in ckpt_pkl:
