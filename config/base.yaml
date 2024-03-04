@@ -97,9 +97,9 @@ experiment:
   early_ckpt: True
 
   # Checkpoint directory to warm start from.
-  warm_start: True
+  warm_start: ./warm/
   use_warm_start_conf: False
-  ckpt_dir: ./warm/
+  ckpt_dir: ./ckpt/
 
   # Loss weights.
   trans_loss_weight: 1.0
