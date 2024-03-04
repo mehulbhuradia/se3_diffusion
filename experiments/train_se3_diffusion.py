@@ -108,7 +108,10 @@ class Experiment:
             self._log.info(f'Loading checkpoint from {ckpt_path}')
             ckpt_pkl = du.read_pkl(ckpt_path, use_torch=True)
             ckpt_model = ckpt_pkl['model']
-
+            # Check if CUDA (GPU) is available
+            if torch.cuda.is_available():
+                # Set the current device to the default CUDA device
+                torch.cuda.set_device(torch.cuda.current_device())
             if conf.experiment.use_warm_start_conf:
                 OmegaConf.set_struct(conf, False)
                 conf = OmegaConf.merge(conf, ckpt_pkl['conf'])
