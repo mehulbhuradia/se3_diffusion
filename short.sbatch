@@ -2,7 +2,7 @@
 #SBATCH --partition=general
 #SBATCH --job-name=se3_train
 #SBATCH --qos=short         
-#SBATCH --time=20:00:00      
+#SBATCH --time=00:20:00      
 #SBATCH --ntasks=1         
 #SBATCH --cpus-per-task=2   
 #SBATCH --mem-per-cpu=64G
