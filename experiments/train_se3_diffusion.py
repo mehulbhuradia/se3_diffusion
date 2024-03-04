@@ -106,7 +106,7 @@ class Experiment:
             ckpt_name = ckpt_files[0]
             ckpt_path = os.path.join(ckpt_dir, ckpt_name)
             self._log.info(f'Loading checkpoint from {ckpt_path}')
-            ckpt_pkl = du.read_pkl(ckpt_path, use_torch=True, map_location=torch.cuda.current_device())
+            ckpt_pkl = du.read_pkl(ckpt_path, use_torch=True, map_location=torch.device('cpu'))
             ckpt_model = ckpt_pkl['model']
             if conf.experiment.use_warm_start_conf:
                 OmegaConf.set_struct(conf, False)
