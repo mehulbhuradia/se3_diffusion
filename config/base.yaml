@@ -88,7 +88,7 @@ experiment:
   sample_mode: cluster_time_batch
 
   # Wandb logging
-  wandb_dir: /tmp
+  wandb_dir: /tmp/mbhuradia/
   use_wandb: True
 
   # How many steps to checkpoint between.
