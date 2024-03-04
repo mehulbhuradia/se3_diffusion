@@ -235,12 +235,9 @@ class Experiment:
     def init_wandb(self):
         self._log.info('Initializing Wandb.')
         conf_dict = OmegaConf.to_container(self._conf, resolve=True)
-        wandb.init(
-            project='se3-diffusion',
-            name=self._exp_conf.name,
-            config=dict(eu.flatten_dict(conf_dict)),
-            dir=self._exp_conf.wandb_dir,
-        )
+        kwargs = {'name': self._exp_conf.name, 'project': 'se3', 'config': dict(eu.flatten_dict(conf_dict)),
+          'settings': wandb.Settings(_disable_stats=True), 'reinit': True, 'mode': 'online'}
+        wandb.init(**kwargs)
         self._exp_conf.run_id = wandb.util.generate_id()
         self._exp_conf.wandb_dir = wandb.run.dir
         self._log.info(
