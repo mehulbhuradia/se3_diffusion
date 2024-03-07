@@ -10,11 +10,5 @@ data:
 
 experiment:
   name: icml_published
-  num_epoch: 95
-  batch_size: 128
-  max_squared_res: 300000
-  rot_loss_t_threshold: 0.0
-  rot_loss_weight: 1.0
-  separate_rot_loss: False
   sample_mode: time_batch
 
