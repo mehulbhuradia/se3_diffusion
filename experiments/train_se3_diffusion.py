@@ -242,7 +242,7 @@ class Experiment:
             project='se3-diffusion',
             name=self._exp_conf.name,
             config=dict(eu.flatten_dict(conf_dict)),
-            dir=self._exp_conf.wandb_dir,
+            dir=tempfile.gettempdir(),
         )
         self._exp_conf.run_id = wandb.util.generate_id()
         self._exp_conf.wandb_dir = wandb.run.dir
